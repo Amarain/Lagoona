@@ -99,7 +99,7 @@ img {
     font-weight: 400;
     font-size: 40px;
     line-height: 40px;
-    color: #333333;
+    color: var(--title-black-color);
     padding-left: 40px;
 }
 
@@ -118,6 +118,20 @@ img {
 
 .section:not(:last-child) {
     margin-bottom: 70px;
+}
+
+/* ROOT */
+
+:root {
+    --default-yellow-color: #CC9933;
+    --hover-yellow-color: #F0BF5F;
+    --active-yellow-color: #A47312;
+    --header-gray-color: #666666;
+    --title-black-color: #333333;
+    --text-black-color: #000000;
+    --name-logo-gray-color: #999999;
+    --text-white-color: #FFFFFF;
+    --tour-white-color: #E9E9E9;
 }
 
 /* Header */
@@ -142,21 +156,73 @@ img {
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
-    color: #666666;
+    color: var(--header-gray-color);
     margin-right: auto;
     align-items: center;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-contacts:focus {
+    outline: 1px solid var(--default-yellow-color);
+    outline-offset: 5px;
+    color:var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header-contacts:hover {
+    color: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header-contacts:active {
+    color: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
 }
 
 .header-lk {
-    padding-left: 28px;
-    color: #CC9933;
+    color: var(--default-yellow-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.header-lk:focus {
+    outline: 1px  var(--default-yellow-color);
+    outline-offset: 5px;
+    color: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header-lk:hover {
+    color: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header-lk:active {
+    color: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
 }
 
 .link-logo {
     padding-right: 7px;
+    fill: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.link-logo:focus path {
+    fill: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.link-logo:hover path {
+    fill: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.link-logo:active path {
+    fill: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
 }
 
 
@@ -179,7 +245,7 @@ img {
     align-items: center;
     flex-grow: 1;
     max-height: 70px;
-    background-color: #fff;
+    background-color:  var(--text-white-color);
     border-radius: 15px;
 }
 
@@ -191,14 +257,26 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    color: #666666;
+    color: var(--header-gray-color);
+    transition: color 0.3s ease-in-out;
 }
 
-/* .nav-container {
-    max-height: 70px;
-    background-color: #fff;
-    border-radius: 15px;
-} */
+.header-link:focus {
+    outline: 1px solid var(--default-yellow-color);
+    outline-offset: 5px;
+    color: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header-link:hover {
+    color: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.header-link:active {
+    color: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
 
 .header-nav {
     padding: 27px;
@@ -208,12 +286,30 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    color: #CC9933;
-    border: 1px solid #CC9933;
+    color:  var(--default-yellow-color);
+    border: 1px solid  var(--default-yellow-color);
     border-radius: 10px;
     padding: 13px 20px;
     align-items: flex-start;
-/*     height: 40px; */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header-btn:focus {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header-btn:hover {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.header-btn:active {
+    background-color:  var(--active-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Special Offers */
@@ -222,7 +318,7 @@ img {
     font-weight: 700;
     font-size: 40px;
     line-height: 40px;
-    color: #FFFFFF;
+    color: var(--text-white-color);
     max-width: 300px;
     margin: 0;
     margin-bottom: 15px;
@@ -235,7 +331,7 @@ img {
     font-weight: 700;
     font-size: 60px;
     line-height: 60px;
-    color: #FFFFFF;
+    color: var(--text-white-color);
 }
 
 .special-price-right {
@@ -243,14 +339,14 @@ img {
     margin-bottom: 45px;
     font-size: 30px;
     line-height: 30px;
-    color: #FFFFFF;
+    color: var(--text-white-color);
 }
 
 .special-price {
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
-    color: #FFFFFF;
+    color: var(--text-white-color);
     opacity: 0.8;
     margin: 0;
     margin-bottom: 40px;
@@ -258,7 +354,7 @@ img {
 
 
 .item-link {
-    color: #CC9933;
+    color:  var(--default-yellow-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
@@ -266,16 +362,14 @@ img {
     background-repeat: no-repeat;
     background-size: 15px 15px;
     padding-right: 15px;
+    max-width: 102px;
 }
 
 .link-img {
-
     background-image: url(../img/special-link-logo.svg);
-
 }
 
 .link-img-right {
-    width: 102px;
     background-image: url(../img/special-link-logo.svg);
 }
 
@@ -336,11 +430,34 @@ img {
     height: 544px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(../img/special-lux.jpg);
+    background-image:linear-gradient(360deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%),
+     url(../img/special-lux.jpg);
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
+.special-link {
+    color:  var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
 
+.special-link:focus {
+    outline: 1px solid  var(--default-yellow-color);
+    outline-offset: 5px;
+    width: 100%;
+    color: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.special-link:hover {
+    color: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.special-link:active {
+    color: var(--text-white-color);
+    transition: color 0.3s ease-in-out;
+}
 
 
 /* About */
@@ -350,7 +467,7 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 200%;
-    color: #000000;
+    color: var(--text-black-color);
 }
 
 .about-descr {
@@ -369,7 +486,6 @@ img {
 
 .services-subtitle {
     margin: 0;
-
 }
 
 .services-list {
@@ -379,7 +495,7 @@ img {
 .services-item {
     display: inline-block;
     vertical-align: top;
-    background-color: #FFFFFF;
+    background-color: var(--text-white-color);
     text-align: left;
     width: 570px;
     height: 330px;
@@ -410,11 +526,33 @@ img {
     background-image: url(../img/services-4.jpg);
 }
 
+.service-link-img {
+    transition: color 0.3s ease-in-out;
+}
+
+.service-link-img:focus {
+    outline: 1px solid  var(--default-yellow-color);
+    outline-offset: 5px;
+    width: 100%;
+    color: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.service-link-img:hover {
+    color: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.service-link-img:active {
+    color: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
 .services-item-img {
     font-weight: 500;
     font-size: 20px;
     line-height: 200%;
-    color: #CC9933;
+    color:  var(--default-yellow-color);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center right;
@@ -426,7 +564,7 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 200%;
-    color: #000000;
+    color: var(--text-black-color);
 }
 
 .services-item:nth-child(odd) {
@@ -453,7 +591,7 @@ img {
 }
 
 .advantage-item {
-    background-color: #fff;
+    background-color:  var(--text-white-color);
     min-height: 276px;
     text-align: left;
     font-size: 16px;
@@ -504,7 +642,7 @@ img {
     width: 374px;
     min-height: 440px;
     position: relative;
-    background-color: #FFFFFF;
+    background-color: var(--text-white-color);
     border-radius: 15px;
 }
 
@@ -529,7 +667,7 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    color: #000000;
+    color: var(--text-black-color);
     margin-right: 55px;
 }
 
@@ -537,7 +675,7 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    color: #999999;
+    color: var(--name-logo-gray-color);
     margin-bottom: 15px;
 }
 
@@ -549,7 +687,7 @@ img {
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
-    color: #000000;
+    color: var(--text-black-color);
 }
 
 .placement-item-info {
@@ -560,14 +698,34 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    color: #CC9933;
-    border: 1px solid #CC9933;
+    color:  var(--default-yellow-color);
+    border: 1px solid  var(--default-yellow-color);
     margin-left: 45px;
     padding: 13px 20px;
     border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.hotel-rooms-btn:focus {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.hotel-rooms-btn:hover {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.hotel-rooms-btn:active {
+    background-color:  var(--active-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .placement-item-all {
+    position: relative;
     width: 374px;
     list-style: none;
     background-image: url(../img/placement-9.jpg);
@@ -576,13 +734,23 @@ img {
     align-items: flex-end;
     justify-content: center;
     padding: 20px;
+    background-color: transparent;
+}
+
+.placement-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .placement-link {
     font-weight: 500;
     font-size: 20px;
     line-height: 200%;
-    color: #FFFFFF;
+    color: var(--text-white-color);
     background-image: url(../img/placement-link-img.svg);
     background-repeat: no-repeat;
     background-position: center right;
@@ -599,13 +767,13 @@ img {
 
 .container-bg {
     padding-bottom: 45px;
-    background-color: #E9E9E9;
+    background-color: var(--tour-white-color);
     border-radius: 15px;
 }
 .form {
     width: 1080px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color:  var(--text-white-color);
     border-radius: 15px;
     align-items: center;
     padding: 30px 30px 30px 30px;
@@ -614,14 +782,15 @@ img {
 .tour-label {
     font-size: 12px;
     line-height: 12px;
-    color: #000000;
+    color: var(--text-black-color);
 }
 
 
 .form-item-select-input {
     font-size: 16px;
     line-height: 16px;
-    color: #000000;
+    color: var(--text-black-color);
+    outline: none;
 }
 
 .form-select {
@@ -631,7 +800,7 @@ img {
 
 .form-input {
     border: none;
-    border-bottom: 1px solid #E9E9E9;
+    border-bottom: 1px solid var(--tour-white-color);
     width: 120px;
 }
 
@@ -651,10 +820,29 @@ img {
 .tour-btn {
     font-size: 16px;
     line-height: 16px;
-    color: #CC9933;
-    border: 1px solid #CC9933;
+    color:  var(--default-yellow-color);
+    border: 1px solid  var(--default-yellow-color);
     border-radius: 10px;
     padding: 13px 30px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.tour-btn:focus {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.tour-btn:hover {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.tour-btn:active {
+    background-color:  var(--active-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .tour-label {
@@ -674,14 +862,14 @@ img {
 }
 
 .contacts-bg {
-    background: #FFFFFF;
+    background: var(--text-white-color);
     border-radius: 15px;
     position: relative;
     padding: 45px;
 }
 
 .contacts-item {
-    border-bottom: 1px solid #E9E9E9;
+    border-bottom: 1px solid var(--tour-white-color);
     min-height: 72px;
     width: 375px;
     margin-bottom: 25px;
@@ -696,7 +884,7 @@ img {
 .contacts-item-caption {
     font-size: 20px;
     line-height: 20px;
-    color: #000000;
+    color: var(--text-black-color);
     margin: 0;
     padding-bottom: 50px;
 }
@@ -708,20 +896,38 @@ img {
 .contacts-item-text {
     font-size: 16px;
     line-height: 150%;
-    color: #000000;
+    color: var(--text-black-color);
     margin: 0;
 }
 
 .contacts-link-descr {
     font-size: 16px;
     line-height: 150%;
-    color: #999999;
+    color: var(--name-logo-gray-color);
 }
 
 .contacts-item-link {
     font-size: 16px;
     line-height: 150%;
-    color: #CC9933;
+    color:  var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.contacts-item-link:focus {
+    outline: 1px solid  var(--default-yellow-color);
+    outline-offset: 3px;
+    color: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.contacts-item-link:hover {
+    color: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.contacts-item-link:active {
+    color: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
 }
 
 .contacts-right {
@@ -738,14 +944,50 @@ img {
 .contacts-btn {
     font-size: 16px;
     line-height: 16px;
-    color: #CC9933;
-    border: 1px solid #CC9933;
+    color:  var(--default-yellow-color);
+    border: 1px solid  var(--default-yellow-color);
     padding: 27px 29px;
     border-radius: 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contacts-btn:focus {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contacts-btn:hover {
+    background-color:  var(--default-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contacts-btn:active {
+    background-color:  var(--active-yellow-color);
+    color: var(--text-white-color);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .contacts {
     margin-bottom: 40px;
+}
+
+.phone-1 {
+    width: 138px;
+    outline-offset: 0;
+}
+
+.phone-2 {
+    width: 143px;
+}
+
+.mail-1 {
+    width: 120px;
+}
+
+.mail-2 {
+    width: 128px;
 }
 
 /* Footer */
@@ -759,7 +1001,7 @@ footer {
 }
 
 .footer-bg {
-    background: #333333;
+    background: var(--title-black-color);
     border-radius: 15px;
     padding: 45px 45px 45px 45px;
     position: relative;
@@ -771,7 +1013,7 @@ footer {
 .footer-item-descr {
     font-size: 16px;
     line-height: 190%;
-    color: #FFFFFF;
+    color: var(--text-white-color);
     margin: 0;
     margin-bottom: 15px;
 }
@@ -783,7 +1025,7 @@ footer {
 .footer-descr {
     font-size: 16px;
     line-height: 190%;
-    color: #FFFFFF;
+    color: var(--text-white-color);
     max-width: 300px;
     margin: 0;
     margin-bottom: 40px;
@@ -792,7 +1034,27 @@ footer {
 .footer-link {
     font-size: 16px;
     line-height: 150%;
-    color: #CC9933;
+    color:  var(--default-yellow-color);
+}
+
+.footer-link-agreement {
+    outline-offset: 5px;
+}
+
+.footer-link:focus {
+    outline: 1px solid  var(--default-yellow-color);
+    color: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: var(--hover-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:active {
+    color: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
 }
 
 .footer-item-link {
@@ -803,8 +1065,21 @@ footer {
     margin-bottom: 15px;
 }
 
-
-
 .footer-middle {
     margin-right: 270px;
+}
+
+.social-link:focus path {
+    fill: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover path {
+    fill: var(--default-yellow-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:active path {
+    fill: var(--active-yellow-color);
+    transition: color 0.3s ease-in-out;
 }
