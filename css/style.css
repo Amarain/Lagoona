@@ -210,17 +210,17 @@ img {
     transition: color 0.3s ease-in-out;
 }
 
-.link-logo:focus path {
+.header-lk:focus .link-logo {
     fill: var(--default-yellow-color);
     transition: color 0.3s ease-in-out;
 }
 
-.link-logo:hover path {
+.header-lk:hover .link-logo {
     fill: var(--hover-yellow-color);
     transition: color 0.3s ease-in-out;
 }
 
-.link-logo:active path {
+.header-lk:active .link-logo {
     fill: var(--active-yellow-color);
     transition: color 0.3s ease-in-out;
 }
